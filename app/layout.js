@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
