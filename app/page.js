@@ -60,8 +60,13 @@ export default function Home() {
           <LogoIcon className="h-20" />
           <button
             onClick={() => setCartPopup(true)}
-            className="p-3 rounded-full hover:bg-gray-100 text-gray-600 hover:text-gray-900 cursor-pointer transform-all hover:scale-110 duration-300"
+            className="relativep-3 rounded-full hover:bg-gray-100 text-gray-600 hover:text-gray-900 cursor-pointer transform-all hover:scale-110 duration-300"
           >
+            {cart.length ? (
+              <div className="absolute z-10 transform translate-x-4 -translate-y-3 text-xs font-semibold text-white h-4 w-4 flex items-center justify-center rounded-full bg-indigo-500">
+                {cart.length}
+              </div>
+            ) : null}
             <CartIcon className="h-7" />
           </button>
         </div>
