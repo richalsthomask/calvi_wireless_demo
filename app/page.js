@@ -54,7 +54,7 @@ export default function Home() {
   ]);
 
   return (
-    <main className="w-full min-h-screen bg-white p-10">
+    <main className="w-full min-h-screen bg-white p-4 sm:p-10">
       <div className="mx-auto max-w-4xl w-full flex flex-col">
         <div className="px-3 py-5 flex flex-row items-center justify-between gap-5">
           <LogoIcon className="h-20" />
@@ -66,9 +66,9 @@ export default function Home() {
           </button>
         </div>
         <div className="h-px w-full bg-gray-300" />
-        <div className="w-full px-3 flex flex-col gap-5">
+        <div className="w-full sm:px-3 flex flex-col gap-5">
           <div className="mt-5 p-5 border rounded-lg shadow-lg flex flex-col">
-            <div className="w-full grid grid-cols-3 gap-4">
+            <div className="w-full flex flex-col md:grid md:grid-cols-3 gap-4">
               {/* filter dropdowns */}
               {filterValus.map((filter, filterIndex) => (
                 <div key={filterIndex} className="flex flex-col gap-2">
@@ -115,13 +115,13 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="mt-3 w-full grid grid-cols-6 gap-5 font-semibold pb-2 text-gray-500 text-lg border-b-2 border-gray-300">
+          <div className="mt-3 w-full grid grid-cols-5 md:grid-cols-6 gap-5 font-semibold pb-2 text-gray-500 text-base sm:text-lg border-b-2 border-gray-300">
             {/* table headings */}
             <span className="col-span-2">Product Number</span>
             <span>Region</span>
             <span>eSIM</span>
             <span>Form Factor</span>
-            <span className="mx-auto">Qty</span>
+            <span className="mx-auto hidden md:block">Qty</span>
           </div>
           <div className="-mt-4 divide-y divide-gray-300">
             {/* table rows */}
@@ -141,7 +141,7 @@ export default function Home() {
               .map((product, productIndex) => (
                 <div
                   key={productIndex}
-                  className="py-3 pl-3 w-full grid grid-cols-6 gap-5 text-gray-500"
+                  className="py-3 pl-3 w-full grid grid-cols-5 md:grid-cols-6 gap-5 text-sm sm:text-base text-gray-500"
                 >
                   <span className="col-span-2">{product.label}</span>
                   <div className="flex flex-col gap-1">
@@ -161,9 +161,12 @@ export default function Home() {
                       <span key={index}>{val}</span>
                     ))}
                   </div>
-                  <span className="mx-auto">
+                  <span className="hidden md:block mx-auto">
                     <OrderButton {...{ product, cart, setCart }} />
                   </span>
+                  <div className="md:hidden col-span-6 flex justify-end">
+                    <OrderButton {...{ product, cart, setCart }} />
+                  </div>
                 </div>
               ))}
           </div>

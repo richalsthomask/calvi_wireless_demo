@@ -96,16 +96,16 @@ const CartRow = ({ product, removeProduct, index }) => {
           <TrashIcon className="h-4" />
         </button>
       </div>
-      <div className="border-y py-1.5 px-4 w-full grid grid-cols-11 gap-2">
+      <div className="border-y py-1.5 px-4 w-full grid grid-cols-8 sm:grid-cols-11 gap-2">
         <span>#</span>
         <span className="col-span-3">Name</span>
         <span className="col-span-2">Region</span>
-        <span className="">Esim</span>
-        <span className="col-span-2">Form Factor</span>
+        <span className="hidden sm:block">Esim</span>
+        <span className="col-span-2 hidden sm:block">Form Factor</span>
         <span className="">Price</span>
         <span className="text-center">Qty</span>
       </div>
-      <div className="border-y py-1.5 px-4 w-full grid grid-cols-11 gap-2 text-gray-500 font-light text-xs">
+      <div className="border-y py-1.5 px-4 w-full grid grid-cols-8 sm:grid-cols-11 gap-2 text-gray-500 font-light text-xs">
         <span>{index + 1}</span>
         <span className="col-span-3">{productDetails.label}</span>
         <span className="col-span-2 flex flex-col">
@@ -115,8 +115,10 @@ const CartRow = ({ product, removeProduct, index }) => {
             </span>
           ))}
         </span>
-        <span className="">{productDetails.eSIM ? "Yes" : "No"}</span>
-        <span className="col-span-2 flex flex-col">
+        <span className="hidden sm:block">
+          {productDetails.eSIM ? "Yes" : "No"}
+        </span>
+        <span className="col-span-2 hidden sm:flex flex-col">
           {productDetails.formFactors.map((val, index) => (
             <span key={index}>{val}</span>
           ))}

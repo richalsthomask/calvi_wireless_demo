@@ -101,7 +101,7 @@ export default function OrderButton({
           },
         ])
       }
-      className="px-4 py-1.5 rounded-full bg-green-600 hover:bg-green-500 text-sm shadow-xl text-white font-semibold"
+      className="px-5 py-2 rounded-full bg-green-600 hover:bg-green-500 text-xs sm:text-sm shadow-xl text-white font-semibold"
     >
       PRE-ORDER
     </button>
