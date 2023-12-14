@@ -84,7 +84,7 @@ const CartRow = ({ product, removeProduct, index }) => {
     <div className="w-full flex flex-col">
       <div className="py-4 w-full flex flex-row items-center justify-between px-4">
         <div className="flex flex-row items-center gap-8">
-          <Image src="/C42GM.webp" alt="" height={40} width={40} />
+          <Image src="C42GM.webp" alt="" height={40} width={40} />
           <span className="font-semibold text-gray-500">
             {productDetails.label}
           </span>
