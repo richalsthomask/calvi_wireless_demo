@@ -89,7 +89,7 @@ export const VegIcon = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 225 225"
   >
-    <g fill="none" stroke-width="5">
+    <g fill="none" strokeWidth="5">
       <rect width="150" height="150" x="25" y="25" stroke="#00a651" />
     </g>
     <circle cx="100" cy="100" r="50" fill="#00a651" />
@@ -102,7 +102,7 @@ export const NonVegIcon = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 225 225"
   >
-    <g fill="none" stroke-width="5">
+    <g fill="none" strokeWidth="5">
       <rect width="150" height="150" x="25" y="25" stroke="red" />
     </g>
     <circle cx="100" cy="100" r="50" fill="red" />
