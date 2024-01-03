@@ -33,7 +33,7 @@ export default function DishesList() {
   };
 
   return (
-    <main className="font-serif w-full min-h-screen bg-white">
+    <main className="font-serif w-full min-h-screen bg-white dark:bg-black">
       {loading ? (
         <div className="w-full h-screen py-20 flex items-center justify-center">
           <LoadingCircleIcon className="h-8" />
@@ -43,12 +43,12 @@ export default function DishesList() {
           style={{ minWidth: "300px" }}
           className="pt-2 sm:p-10 mx-auto max-w-7xl w-full flex flex-col relative"
         >
-          <div className="sticky top-0 bg-white z-10">
-            <div className="px-4 sm:px-0 text-gray-500 flex flex-row items-center justify-between gap-5">
+          <div className="sticky top-0 bg-white dark:bg-black z-10">
+            <div className="px-4 sm:px-0 flex flex-row items-center justify-between gap-5">
               <span className="text-xl">UNI Resto Cafe</span>
               <div className="flex flex-row items-center gap-4">
                 My Orders
-                <div className="pt-2 relative rounded-full hover:bg-gray-100 cursor-pointer transform-all hover:scale-110 duration-300">
+                <div className="pt-2 relative rounded-full cursor-pointer transform-all hover:scale-110 duration-300">
                   <div className="font-sans absolute z-10 transform translate-x-4 -translate-y-2 text-xs font-semibold text-white px-1 py-.5 flex items-center justify-center rounded-full bg-red-500">
                     {cart.reduce((sum, val) => sum + val.qty, 0)}
                   </div>

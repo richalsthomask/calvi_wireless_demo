@@ -52,7 +52,7 @@ export default function DishDetail({ dish, cartDetail, setOrderQuantity }) {
               </span>
             </div>
             <div className="sn:hidden h-2" />
-            <span className="hidden sm:block text-justify text-sm text-gray-400">
+            <span className="hidden sm:block text-justify text-gray-800 dark:text-gray-300">
               {dish.dish_description}
             </span>
             <CartButton className="mt-3 hidden sm:flex" />
@@ -63,7 +63,7 @@ export default function DishDetail({ dish, cartDetail, setOrderQuantity }) {
             )}
           </div>
         </div>
-        <span className="sm:hidden pt-4 text-sm text-gray-400">
+        <span className="sm:hidden pt-4 text-sm text-gray-800 dark:text-gray-300">
           {dish.dish_description}
         </span>
         <CartButton className="mt-3 sm:hidden" />

@@ -53,7 +53,9 @@ export default function Headings({
             <span
               className={
                 "text-sm md:text-base md:whitespace-pre truncate break-words " +
-                (ele.value === selected ? "text-red-600 " : "text-gray-600 ")
+                (ele.value === selected
+                  ? "text-red-600 "
+                  : "text-gray-600 dark:text-gray-300")
               }
               style={{ lineHeight: "1.5em" }}
             >
@@ -63,7 +65,7 @@ export default function Headings({
         ))}
       </div>
       <div
-        className="relative bg-red-500 transform-all duration-200 "
+        className="relative bg-red-500 transform-all duration-300 "
         style={{
           bottom: "4px",
           height: "4px",
